@@ -1,0 +1,85 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function CalculateFirst(i){
+calculator.inputwindow1.value+=i;
+calculator.inputwindow2.value = eval(calculator.inputwindow1.value);
+}
+function CalculateSecond(i){
+calculator.inputwindow1.value=calculator.inputwindow2.value;
+calculator.inputwindow1.value+=i;
+}
+
+function calculateResult(){
+calculator.inputwindow1.value= calculator.inputwindow2.value;
+}
+
+</script>
+<style>
+body div.mycalc {
+	text-align: center;
+	width: 214px;
+	margin: 0 auto;
+}
+
+div input[type='button'], button {
+	width: 50px;
+	height: 50px;
+	margin: 2px 0;
+}
+
+div input[type="text"] {
+	height: 50px;
+	width: 100%;
+	background-color: #999;
+	color: #fff;
+}
+
+div.results input {
+	background-color: #fd7202;
+	color: #fff;
+	height: 50px;
+	width: 214px;
+}
+
+#plus, #minus, #by, #divide, #percent {
+	background-color: #f5eafa;
+	font-size: 16px;
+}
+</style>
+</head>
+<div class="mycalc">
+	<form name="calculator" id="calculator">
+		<input type="text" name="inputwindow1" id="inputwindow1">
+		<input type="text" name="inputwindow2" id="inputwindow2">
+		<div>
+			<input type="button" id="one" value="1" onclick="CalculateFirst('1')">
+			<input type="button" id="two" value="2" onclick="CalculateFirst('2')">
+			<input type="button" id="three" value="3" onclick="CalculateFirst('3')">
+			<input type="button" id="plus" value="+" onclick="CalculateSecond('+')">
+	    </div>
+	    <div>
+			<input type="button" id="four" value="4" onclick="CalculateFirst('4')">
+			<input type="button" id="five" value="5" onclick="CalculateFirst('5')">
+			<input type="button" id="six" value="6" onclick="CalculateFirst('6')">
+			<input type="button" id="minus" value="-" onclick="CalculateSecond('-')">
+		</div>
+		<div>
+			<input type="button" id="seven" value="7" onclick="CalculateFirst('7')">
+			<input type="button" id="eight" value="8" onclick="CalculateFirst('8')">
+			<input type="button" id="nine" value="9" onclick="CalculateFirst('9')">
+			<input type="button" id="by" value="*" onclick="CalculateSecond('*')">
+	    </div>
+	    <div>
+			<input type="button" id="zero" value="0" onclick="CalculateFirst('0')">
+			<input type="button" id="clear" value="C" onclick="calculator.inputwindow1.value=''; calculator.inputwindow2.value=''">
+			<input type="button" id="divide" value="/" onclick="CalculateSecond('/')">
+			<input type="button" id="percent" value="%" onclick="CalculateSecond('%')">	
+	    </div>
+	    <div class="results">
+			<input type="button" id="equal" value="=" onclick="calculateResult()">
+	    </div>
+	</form>	
+    </div>
+	</html>
