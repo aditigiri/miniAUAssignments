@@ -1,5 +1,7 @@
 //function description
-//take an input and check whether it is a number in a given range or whether it is a name.
+//takes an input which is either a number or a person's details.
+//If it is a number, it prints the range it is in.
+//If it is a person's details, it displays it in a table.
 
 function changeMode()
 {
