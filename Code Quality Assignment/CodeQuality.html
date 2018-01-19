@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>name or number</title>
+		<script  type="text/javascript" src="CodeQuality.js"></script>
+		<link rel="stylesheet" type="text/css" href="CodeQuality.css"></link>
+	</head>
+	<body> 
+		Name Mode: 
+		<input type="checkbox" id="mode" value="Name and Gender Mode" onclick="changeMode()" checked>
+		<br><br>
+		<div id="numberMode" style="visibility:hidden">
+			Enter Number:
+			<input type="number" id="numberInput">
+			<input type="button" value="Analyze" onclick="analyseNumber()">
+			<p id="displayNumber"></p>
+		</div>
+		<div id="nameMode" style="visibility:visible" >
+			Enter Name:
+			<input type="text" id="nameInput">
+			<br>
+			Enter Age:   
+			<input type="number" id="ageInput">
+			<br>
+			Gender:
+			<br>
+			<input type="radio" name="gender" value="male" id="male"> Male<br>
+			<input type="radio" name="gender" value="female" id="female"> Female<br>
+			<input type="button" value="Analyze" onclick="analyseName()">
+			<p id="displayName"></p>
+			<br>
+				<table id="displayTable">
+				<tr>
+					<td>Name</td>
+					<td>Gender</td>
+					<td>Age</td>
+					<td>Description</td>
+				</tr>
+				<tbody>
+				</tbody>
+				</table>
+		</div>
+	</body>
+</html>
+
